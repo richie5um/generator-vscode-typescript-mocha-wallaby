@@ -1,11 +1,11 @@
 module.exports = function() {
   return {
     files: [
-      '!app/**/*.spec.ts',
-      'app/**/*.ts'
+      '!src/**/*.spec.ts',
+      'src/**/*.ts'
     ],
     tests: [
-      'app/**/*.spec.ts'
+      'src/**/*.spec.ts'
     ],
     debug: true,
     testFramework: 'mocha',
