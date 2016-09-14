@@ -2,21 +2,30 @@
   "name": "name",
   "version": "1.0.0",
   "description": "",
+  "author": "<%= author%>",
+  "license": "ISC",
   "main": "src/index.js",
+  "precommit": {
+    "tasks": [
+      "npm run precommit"
+    ]
+  },
   "scripts": {
-    "postinstall": "./node_modules/.bin/typings install",
+    "build": "./node_modules/.bin/tsc",
+    "postinstall": "npm run precommit:install && ./node_modules/.bin/typings install",
     "posttest": "./node_modules/.bin/istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100; ./node_modules/.bin/remap-istanbul -i coverage/coverage.json -o coverage -t html",
+    "precommit": "npm run build && npm run test",
+    "precommit:install": "./node_modules/.bin/precommit install",
+    "precommit:uninstall": "./node_modules/.bin/precommit remove",
     "start": "node src/index.js",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha src"
   },
-  "author": "<%= author%>",
-  "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
+    "precommit": "^1.2.0",
     "remap-istanbul": "^0.6.4",
     "source-map-support": "^0.4.0",
     "tslint": "^3.15.1",

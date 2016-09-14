@@ -17,7 +17,8 @@
     "typescript",
     "mocha",
     "wallaby",
-    "yeoman-generator"
+    "yeoman-generator",
+    "istanbul"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
