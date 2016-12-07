@@ -1,6 +1,6 @@
 {
   "name": "generator-vscode-typescript-mocha-wallaby",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "VSCode Project for Typescript 2, with Mocha and Wallaby for Testing",
   "homepage": "https://github.com/richie5um/generator-vscode-typescript-mocha-wallaby",
   "author": {
