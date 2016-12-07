@@ -33,9 +33,9 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
     "precommit": "^1.2.0",
-    "remap-istanbul": "^0.6.4",
+    "remap-istanbul": "^0.7.0",
     "source-map-support": "^0.4.0",
-    "tslint": "^3.15.1",
+    "tslint": "^4.0.2",
     "typescript": "^2.0.10"
   }
 }
