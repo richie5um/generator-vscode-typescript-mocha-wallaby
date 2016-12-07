@@ -1,11 +1,14 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": true
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "sourceMap": true,
+        "target": "es6"
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "coverage"
     ]
 }

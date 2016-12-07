@@ -43,6 +43,9 @@ module.exports = yeoman.Base.extend({
       src: '_.gitignore',
       dst: '.gitignore'
     }, {
+      src: '_.nvmrc',
+      dst: '.nvmrc'
+    }, {
       src: '_package.json',
       dst: 'package.json',
       props: {
@@ -56,9 +59,6 @@ module.exports = yeoman.Base.extend({
       src: '_tslint.json',
       dst: 'tslint.json'
     }, {
-      src: '_typings.json',
-      dst: 'typings.json'
-    }, {
       src: '_wallaby.js',
       dst: 'wallaby.js'
     }, {
@@ -68,6 +68,9 @@ module.exports = yeoman.Base.extend({
       src: '_test/_mocha.opts',
       dst: 'test/mocha.opts'
     }, {
+      src: '_src/_index.ts',
+      dst: 'src/index.ts'
+    }, {
       src: '_src/_app.ts',
       dst: 'src/app.ts'
     }, {
@@ -75,7 +78,7 @@ module.exports = yeoman.Base.extend({
       dst: 'src/app.spec.ts'
     }];
 
-    files.forEach(function(file) {
+    files.forEach(function (file) {
       if (file.props) {
         this.fs.copyTpl(
           this.templatePath(file.src),
@@ -92,7 +95,6 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-
     this.installDependencies({
       bower: false,
       npm: true,
